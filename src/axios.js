@@ -1,5 +1,4 @@
-import axios from 'axios';
-
+import axios from "axios";
 
 const REACT_APP_SERVER_API = process.env.REACT_APP_SERVER_API;
 
@@ -8,7 +7,7 @@ const instance = axios.create({
 });
 
 instance.interceptors.request.use((config) => {
-  config.headers.Authorization = window.localStorage.getItem('token');
+  config.headers.Authorization = window.localStorage.getItem("token");
   return config;
 });
 
